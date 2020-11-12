@@ -1,0 +1,19 @@
+include ../base/variable.pug
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    // FONT AWESOME
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css")
+    // MAIN CSS
+    link(rel="stylesheet", href="./assets/css/main")
+
+    block title
+  body
+    block header
+      include ../partials/header.pug
+    block content
+    block footer
+      include ../partials/footer.pug

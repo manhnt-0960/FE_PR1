@@ -1,0 +1,13 @@
+.container
+	.header__top__left
+		i.fas.fa-bars
+		ul
+			each item in headerTopContent
+				if item.name == 'Danh sách ưu thích'
+					li
+						a(href=item.link)= item.name
+	.header__top__right
+		form
+			input(placeholder='Tìm kiếm ở đây ...')
+			button
+				i.fa.fa-search

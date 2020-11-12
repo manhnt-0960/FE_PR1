@@ -1,0 +1,77 @@
+@mixin font-face($name, $url){
+  @font-face {
+    font-family: $name;
+    src: url('../fonts/#{url}.ttf');
+  }
+}
+
+@mixin pl-pr($left, $right){
+  padding-left: $left;
+  padding-right: $right;
+}
+
+@mixin ml-mr($left, $right){
+  margin-left: $left;
+  margin-right: $right;
+}
+
+@mixin mt-mb($top, $bottom){
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+@mixin pt-pb($top, $bottom){
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+@mixin grid($col, $gap){
+  display: grid;
+  grid-template-columns: repeat($col, 1fr);
+}
+
+@mixin transition{
+  transition: all .3s ease;
+}
+
+@mixin xs{
+  @media (min-width: 0){
+    @content;
+  }
+}
+
+@mixin sm{
+  @media (min-width: $sm){
+    @content;
+  }
+}
+
+@mixin md{
+  @media (min-width: $md){
+    @content;
+  }
+}
+
+@mixin lg{
+  @media (min-width: $lg){
+    @content;
+  }
+}
+
+@mixin lg-max{
+  @media (max-width: $lg){
+    @content;
+  }
+}
+
+@mixin xl{
+  @media (min-width: $xl){
+    @content;
+  }
+}
+
+@mixin xl-max{
+  @media (max-width: $xl){
+    @content;
+  }
+}
