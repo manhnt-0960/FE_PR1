@@ -12,7 +12,7 @@ const FilesPath = {
   jsFiles: "src/js/*.js",
   htmlFiles: "src/pug/pages/*.pug",
   htmlAll: "src/pug/**",
-  assetsFiles: "assets/**"
+  assetsFiles: "public/assets/**"
 };
 
 const { sassFiles, jsFiles, htmlFiles, htmlAll, assetsFiles } = FilesPath;
