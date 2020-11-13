@@ -55,3 +55,21 @@ img{
   object-fit: cover;
   vertical-align: middle;
 }
+
+.wrapper{
+  width: 100%;
+  @include pl-pr(15px,15px);
+  @include ml-mr(auto, auto);
+  @include sm{
+    max-width: 540px;
+  }
+  @include md{
+    max-width: 730px;
+  }
+  @include lg{
+    max-width: 960px;
+  }
+  @include xl{
+    max-width: 1170px;
+  }
+}

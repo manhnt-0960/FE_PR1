@@ -6,16 +6,21 @@
     <!-- FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
     <!-- MAIN CSS-->
-    <link rel="stylesheet" href="./assets/css/main"/>
-    <title>Trang chu</title>
+    <link rel="stylesheet" href="./assets/css/styles.css"/>
+    <title>Trang chủ</title>
   </head>
   <body>
     <header>
       <div class="header__top--relative">
-        <div class="container">
+        <div class="wrapper">
           <div class="header__top__left"><i class="fas fa-bars"></i>
             <ul>
+              <li><a href="/">Tài khoản của tôi</a></li>
+              <li><a href="/">Trạng thái đơn hàng</a></li>
               <li><a href="/">Danh sách ưu thích</a></li>
+              <li><a href="/">Giỏ hàng</a></li>
+              <li><a href="/">Đăng nhập</a></li>
+              <li><a href="/">Đăng ký</a></li>
             </ul>
           </div>
           <div class="header__top__right">
@@ -26,11 +31,27 @@
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="header__slide">
+        <input id="header-slide-1" type="radio" name="header-slide"/>
+        <input id="header-slide-2" type="radio" name="header-slide"/>
+        <input id="header-slide-3" type="radio" name="header-slide"/>
+        <div class="header__slide__full-images"><img src="./assets/images/header-slide-1.jpg"/><img src="./assets/images/header-slide-2.jpg"/><img src="./assets/images/header-slide-3.jpg"/>
+        </div>
+        <div class="header__slide__text">
+          <div class="container"><img src="./assets/images/header-slider-text-1.png" alt=""/><img src="./assets/images/header-slider-text-2.png" alt=""/><img src="./assets/images/header-slider-text-3.png" alt=""/>
+          </div>
+        </div>
+        <div class="header__slide__rectangle">
+          <label for="header-slide-1"></label>
+          <label for="header-slide-2"></label>
+          <label for="header-slide-3"></label>
+        </div>
+      </div>
+      <div class="wrapper">
         <div class="header__menu__logo"><img src="./assets/images/header-main-menu-logo.png"/></div>
         <div class="header__menu__list"><i class="fa fa-bar header__list__icon"></i>
           <ul class="header__list__menu">
-            <li><a class="header__list_item" href="./index.html">Trang chủ</a></li>
+            <li><a class="header__list__item" href="./index.html">Trang chủ</a></li>
             <li><a class="header__list__item" href="./products-grid.html">Rượu vang đỏ</a>
               <div class="header__list__sub">
                 <div class="header__sub_title">
@@ -70,11 +91,11 @@
                 <div class="header__sub__tritangle"></div>
               </div>
             </li>
-            <li><a class="header__list_item" href="./products-grid.html">Rượu trắng</a></li>
-            <li><a class="header__list_item" href="./error.html">Champagne</a></li>
-            <li><a class="header__list_item" href="./introduce.html">Thông tin</a></li>
-            <li><a class="header__list_item" href="./blog.html">Blog</a></li>
-            <li><a class="header__list_item" href="./contact.html">Liên hệ</a></li>
+            <li><a class="header__list__item" href="./products-grid.html">Rượu trắng</a></li>
+            <li><a class="header__list__item" href="./error.html">Champagne</a></li>
+            <li><a class="header__list__item" href="./introduce.html">Thông tin</a></li>
+            <li><a class="header__list__item" href="./blog.html">Blog</a></li>
+            <li><a class="header__list__item" href="./contact.html">Liên hệ</a></li>
           </ul>
         </div>
       </div>
