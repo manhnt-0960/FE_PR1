@@ -120,9 +120,9 @@ header{
       color: $color-header-top;
     }
   }
-  .header__top_left{
+  .header__top__left{
     #modal{
-      display: none;
+      display: block;
 
       .modal{
         position: fixed;
@@ -142,27 +142,82 @@ header{
 
           @keyframes animatetop {
             from {
-                top: -100%;
-                opacity: 0;
+              top: -100%;
+              opacity: 0;
             }
             to {
-                top: 25%;
-                opacity: 1;
+              top: 25%;
+              opacity: 1;
             }
           }
           & > img{
-           position: absolute;
-           top: 0;
-           left: 0;
-           height: 100%;
-           width: 200px;
-           margin-left: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 200px;
+            margin-left: 30px;
           }
 
           & > i{
             position: absolute;
-            left: 100%;
-            bottom: 
+            left: 101%;
+            bottom: 101%;
+            display: block;
+            color: $color-modal-close;
+            font-size: $font-size-modal-close;
+          }
+
+          &__text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            @include ml-mr(30%, 10%);
+            color: $color-black;
+            font-size: $font-size-modal-content;
+            text-align: center;
+          
+            & > p{
+              &:first-of-type{
+                font-size: $font-size-modal-title;
+              }
+
+              &:last-of-type{
+                @include mt-mb(30px, 0);
+              }
+            }
+
+            form{
+              display: flex;
+              @include mt-mb(20px, 0);
+              
+              input{
+                @include pl-pr(10px, 5px);
+              }
+
+              button{
+                @include pl-pr(10px, 10px);
+                @include pt-pb(10px, 10px);
+                background-color: $color-hover;
+                color: $color-white;
+              }
+            }
+
+            .input-checkbox{
+              @include mt-mb(25px, 0);
+
+              input{
+                position: relative;
+                visibility: visible;
+
+                &::after{
+                  position: absolute;
+                  visibility: hidden;
+                }
+              }
+            }
           }
         }
       }
