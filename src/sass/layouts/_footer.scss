@@ -1,0 +1,20 @@
+footer{
+  .wrapper{
+    .footer-top{
+      @include pl-pr(30px, 30px);
+    }
+    .footer-middle{
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+
+      &__info{
+        p{
+          text-transform: uppercase;
+          color: $color-black;
+          font-size: 
+        }
+      }
+    }
+  }
+}

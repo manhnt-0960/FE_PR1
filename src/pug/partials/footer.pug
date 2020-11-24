@@ -1,0 +1,41 @@
+footer
+  .wrapper
+    .footer-top
+      img(src='./assets/images/footer-top-brand.png')
+    .footer-middle
+      .footer-middle__info
+        p Thông tin
+        ul
+          each item in footerInfo
+            li
+              a(href='#')= item
+      .footer-middle__buy
+        p Mua hàng
+        ul
+          each item in footerBuy
+            li
+              a(href='#')= item
+      .footer-middle__email
+        p Gửi Email
+        p Gửi email cho chúng tôi để được hỗ trợ
+        form
+          input(placeholder='Enter your email')
+          .form-email-submit
+            button.button__submit Gửi
+            .button__submit__tritangle
+        .footer-middle__social
+          ul
+            each item in footerSocial
+              li
+                a(href='#')= item
+      .footer-middle__contact
+        ul
+          each item in footerContact
+            li
+              i(class=item.icon)
+              a(href='#')= item.text
+    .footer-bottom
+      .footer-bottom__copyright
+        p © Copyright 2008-2014 DKT Technology JSC
+      .footer-bottom__card
+
