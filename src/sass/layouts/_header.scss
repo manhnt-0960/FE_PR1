@@ -17,6 +17,7 @@ header{
           @include lg{
             display: block;
           }
+
           li{
             &:not(:last-child)::after{
               color: $color-header-top;
@@ -31,6 +32,7 @@ header{
             }
           }
         }
+
         &:hover ul{
           @include lg-max{
             position: absolute;
@@ -224,6 +226,7 @@ header{
       }
     }
   }
+
   .header__slide{
     position: relative;
     overflow: hidden;
@@ -287,7 +290,7 @@ header{
             @include sm{
               width: 360px;
             }
-            @inculde md{
+            @include md{
               width: 500px;
             }
             @include lg{
@@ -299,11 +302,249 @@ header{
               top: 73px;
             }
           }
+
           &:nth-child(2){
             position: absolute;
             left: 200px;
             top: 9%;
             width: 150px;
+            @include sm{
+              left: 215px;
+              top: 8%;
+              width: 170px;
+            }
+            @include md{
+              left: 290px;
+              top: 14%;
+              width: 210px;
+            }
+            @include lg{
+              left: 345px;
+              top: 31%;
+              width: 270px;
+            }
+            @include xl{
+              left: 425px;
+              top: 36%;
+              width: 355px;
+            }
+          }
+
+          &:nth-child(3){
+            position: absolute;
+            left: 300px;
+            bottom: 66%;
+            width: 85px;
+            @include sm{
+              left: 390px;
+              width: 90px;
+            }
+            @include md{
+              left: 550px;
+              width: 130px;
+              bottom: 52%;
+            }
+            @include lg{
+              left: 670px;
+              width: 170px;
+              bottom: 26%;
+            }
+            @include xl{
+              left: 800px;
+              bottom: 10%;
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+
+    &__rectangle{
+      position: absolute;
+      bottom: 33px;
+      right: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+
+      label{
+        height: 7px;
+        width: 36px;
+        border: 1px solid $color-white;
+        @include ml-mr(8px, 0);
+        @include transition;
+        
+        &:hover{
+          background-color: $color-hover;
+        }
+      }
+    }
+  }
+
+  .header__menu{
+    position: relative;
+    background-color: $color-black;
+
+    .wrapper{
+      display: flex;
+      justify-content: space-around;
+
+      .header__menu__logo{
+        img{
+          width: 50%;
+          @include pt-pb(18px, 14px);
+          @include xl{
+            width: 100%;
+          }
+        }
+      }
+
+      .header__menu__list{
+        position: static;
+        @include lg{
+          position: relative;
+        }
+        display: flex;
+        align-items: center;
+
+        .header__list__icon{
+          color: $color-white;
+          font-size: $font-size-header-main-menu-list-icon;
+          cursor: pointer;
+          @include lg{
+            display: none;
+          }
+        }
+
+        .header__list__menu{
+          display: none;
+          @include lg{
+            display: block;
+          }
+          & > li{
+            @include pl-pr(0, 40px);
+            
+            &:last-child{
+              @include pl-pr(0, 0);
+            }
+
+            &:nth-child(2){
+              .header__list__sub{
+                position: absolute;
+                top: 30%;
+                left: 0;
+                right: 0;
+                z-index: $z-index-header-menu-hover;
+                @include lg{
+                  top: 100%;
+                  left: -35px;
+                  right: 0;
+                }
+                visibility: hidden;
+                display: flex;
+                justify-content: center;
+                @include pl-pr(31px, 31px);
+                @include pt-pb(38px, 38px);
+                background-color: $color-white;
+                border: 1px solid $color-hover;
+                box-shadow: 0px 8px 18px rgba(0,0,0,0.2);
+                opacity: 0;
+                @include transition;
+
+                .header__sub__title{
+                  @include ml-mr(0, 47px);
+
+                  &:nth-child(2), &:nth-child(3){
+                    display: none;
+                    @include sm{
+                      display: block;
+                    }
+                  }
+
+                  &:nth-child(3){
+                    @include ml-mr(0, 0);
+                    @include lg{
+                      @include ml-mr(0, 25px);
+                    }
+                  }
+
+                  p{
+                    @include mt-mb(0, 13px);
+                    color: $color-black;
+                    font-size: $font-size-header-main-menu-sub;
+                    text-transform: uppercase;
+                  }
+
+                  .header__sub__item{
+                    li{
+                      float: none;
+                      @include mt-mb(0, 13px);
+                      &:last-child{
+                        @include mt-mb(0, 0);
+                      }
+                      a{
+                        font-size: $font-size-header-main-menu-sub;
+                        color: $color-main-menu-sub-item;
+                        text-transform: none;
+                        white-space: nowrap;
+                        @include transition;
+                      }
+                    }
+                  }
+                }
+
+                .header__sub__image{
+                  display: none;
+                  @include lg{
+                    display: block;
+                    width: 100%;
+                  }
+                }
+
+                .header__sub__tritangle{
+                  position: absolute;
+                  bottom: 100%;
+                  left: 50%;
+                  @include lg{
+                    left: 24%;
+                  }
+                  border-left: 8px solid transparent;
+                  border-right: 8px solid transparent;
+                  border-bottom: 8px solid $color-hover;
+                }
+              }
+
+              &:hover .header__list__sub{
+                visibility: visible;
+                opacity: 1;
+              }
+            }
+
+            .header__list__item{
+              color: $color-white;
+              font-size: $font-size-header-main-menu-list-item;
+              text-transform: uppercase;
+              @include transition;
+            }
+          }
+        }
+
+        &:hover .header__list__menu{
+          @include xl-max{
+            position: absolute;
+            display: block;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: $color-black;
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+
+            li{
+              float: none;
+              @include pt-pb(5px, 5px);
+              @include pl-pr(0, 0);
+              text-align: center;
+            }
           }
         }
       }
