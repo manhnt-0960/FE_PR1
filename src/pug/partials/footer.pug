@@ -22,20 +22,24 @@ footer
           input(placeholder='Enter your email')
           .form-email-submit
             button.button__submit Gửi
-            .button__submit__tritangle
+            .form-email-submit__tritangle
+        .clear
         .footer-middle__social
           ul
             each item in footerSocial
               li
-                a(href='#')= item
+                i(class=item)
       .footer-middle__contact
+        p Liên hệ
         ul
           each item in footerContact
             li
               i(class=item.icon)
               a(href='#')= item.text
-    .footer-bottom
+  .footer-bottom
+    .wrapper
       .footer-bottom__copyright
         p © Copyright 2008-2014 DKT Technology JSC
       .footer-bottom__card
+        img(src='./assets/images/footer-bottom-card.png')
 

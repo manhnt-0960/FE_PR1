@@ -1,20 +1,199 @@
 footer{
   .wrapper{
     .footer-top{
-      @include pl-pr(30px, 30px);
+      @include pl-pr(auto, auto);
+      img{
+        display:none;
+        @include sm{
+          display:block;
+          width: 80%;
+        }
+        @include xl{
+          width: auto;
+          @include mt-mb(0, 55px);
+        }
+      }
     }
     .footer-middle{
+      $this: &;
       margin-top: 40px;
       display: flex;
       justify-content: space-between;
 
-      &__info{
+      &__info, &__buy{
+        // width: 300px;
+        flex: 1;
         p{
           text-transform: uppercase;
           color: $color-black;
-          font-size: 
+          font-size: 16px;
+          letter-spacing: 4px;
+          @include mt-mb(0, 15px);
+        }
+        ul{
+          li{
+            float: none;
+            @include mt-mb(0, 7px);
+            &:last-child{
+              @include mt-mb(0, 0);
+            }
+            a{
+              color: $color-primary;
+              text-transform: uppercase;
+              font-size: 13px;
+              letter-spacing: 0px;
+            }
+          }
         }
       }
+
+      &__email{
+        flex: 1;
+        p{
+          &:first-of-type{
+            text-transform: uppercase;
+            color: $color-black;
+            font-size: 16px;
+            letter-spacing: 4px;
+            @include mt-mb(0, 15px);
+          }
+          &:last-of-type{
+            color: $color-primary;
+            font-size: 13px;
+            @include mt-mb(0, 7px);
+          }
+        }
+
+        form{
+          input{
+            float: left;
+            width: 68%;
+            @include pl-pr(15px, 15px);
+            @include pt-pb(5px, 5px);
+            outline: none;
+            font-style: italic;
+            font-size: inherit;
+          }
+          .form-email-submit{
+            float:left;
+            display: flex;
+            @include transition;
+
+            &:hover{
+              button{
+                background-color: $color-hover;
+              }
+
+              .form-email-submit__tritangle{
+                border-left-color: $color-hover;
+              }
+            }
+
+            button{
+              background-color: $color-black-1;
+              @include pl-pr(15px, 10px);
+              color: $color-white;
+              font-family: inherit;
+              font-size: inherit;
+              height: 28px;
+              text-transform: uppercase;
+              @include transition;
+            }
+
+            &__tritangle{
+              border-top: 14px solid transparent;
+              border-left: 20px solid $color-black-1;
+              border-bottom: 14px solid transparent;
+              cursor: pointer;
+              @include transition;
+            }
+          }
+        }
+        .clear{
+          clear: both;
+        }
+
+        .footer-middle__social{
+          ul{
+            li{
+              float: left;
+              @include pl-pr(0, 10px);
+              @include mt-mb(22px, 0);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      &__contact{
+        flex: 1;
+        p{
+          text-transform: uppercase;
+          color: $color-black;
+          font-size: 16px;
+          letter-spacing: 4px;
+          @include mt-mb(0, 15px);
+        }
+
+        ul{
+          li{
+            display: flex;
+            @include mt-mb(0, 7px);
+            i{
+              font-size: 14px;
+              color: $color-black;
+              margin-right: 10px;
+              line-height: 14px;
+            }
+
+            a{
+              color: $color-black;
+              font-size: 13px;
+            }
+            
+            &:nth-child(2){
+              &::after{
+                content: '-';
+                @include pl-pr(5px, 5px);
+              }
+            }
+
+            &:nth-child(4){
+              a{
+                &::after{
+                  content: '';
+                  @include pl-pr(9px, 5px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom{
+    @include mt-mb(30px, 0);
+    border-top: 0.5px solid $color-primary;
+
+    .wrapper{
+      @include pt-pb(15px, 15px);
+      display: flex;
+    }
+
+    &__copyright{
+      // float: left;
+      flex: 1;
+      p{
+        font-family: 'Roboto';
+      }
+    }
+
+    &__card{
+      flex: 0 1 auto;
+      // float: right;
+      align-items: center;
+      @include pl-pr(0, 50px);
     }
   }
 }

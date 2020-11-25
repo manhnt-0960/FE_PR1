@@ -3,6 +3,9 @@ header{
 
   .header__top--relative, .header__top-menu--absolute{
     z-index: $z-index-header-top-menu;
+    background-image: url(../images/header-slide-1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 
     .wrapper{
       display: flex;
@@ -20,12 +23,13 @@ header{
 
           li{
             &:not(:last-child)::after{
-              color: $color-header-top;
+              color: $color-white;
               content: "-";
               @include pl-pr(12px, 12px);
             }
             a{
               @include transition;
+              color: $color-white;
               &:hover{
                 text-decoration: underline;
               }
@@ -54,7 +58,7 @@ header{
           }
         }
         i{
-          color: $color-black;
+          color: $color-white;
           cursor: pointer;
           @include transition;
           @include lg{
@@ -70,17 +74,17 @@ header{
           width: 230px;
           @include pl-pr(10px, 10px);
           border: none;
-          border-left: 1px solid $color-black;
-          color: $color-black;
+          border-left: 1px solid $color-white;
+          color: $color-white;
           font-size: italic;
           background-color: transparent;
 
           &::placeholder{
-            color: $color-black;
+            color: $color-white;
           }
         }
         i{
-          color: $color-black;
+          color: $color-white;
           @include pt-pb(10px, 10px);
           font-size: $font-size-header-top-menu;
           @include transition;
