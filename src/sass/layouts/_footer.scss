@@ -173,7 +173,7 @@ footer{
   }
 
   .footer-bottom{
-    @include mt-mb(30px, 0);
+    @include mt-mb(15px, 0);
     border-top: 0.5px solid $color-primary;
 
     .wrapper{

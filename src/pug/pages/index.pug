@@ -3,5 +3,14 @@ extends ../layouts/default-layout
 block title
   title Trang chủ
 
+block header-top
+  .header__top-menu
+    .header__top-menu--absolute
+      include ../partials/header-top
+
 block header-slider
-    include ../partials/header-slider
+  include ../partials/header-slider
+
+block content
+  main
+    
