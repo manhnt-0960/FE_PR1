@@ -2,3 +2,32 @@ mixin input-checkbox(text, value)
   .input-checkbox
     input(type='checkbox' id=text value=value)
     label(for=text)= text
+
+mixin corner-big(text)
+  .corner-big
+    .corner
+      p= text
+    .underline
+
+mixin title-product(text, arrow)
+  .title-product
+    p= text
+    if arrow != undefine
+      img(src='./assets/images/arrow.png')
+
+mixin image(name)
+  img(src='./assets/images/'+ name)
+
+mixin price-product(price)
+  .price-product
+    p= price
+    sup đ
+
+mixin btn-add-to-card
+  .btn-add-to-card
+    button ADD TO CARD
+
+mixin time-box(num, text)
+  .time-box
+    p= num
+    p= text

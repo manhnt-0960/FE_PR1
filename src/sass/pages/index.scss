@@ -1,0 +1,99 @@
+@import "../base/variables";
+@import "../base/mixins";
+@import "../base/reset";
+@import "../base/global";
+
+main{
+  .intro{
+    background: url("../images/intro-left.png") left top no-repeat, url("../images/intro-right.png") right top no-repeat;
+    background-size: 20%, 10%;
+    
+    .wrapper{
+      @include pt-pb(100px, 0);
+      @include pl-pr(100px, 100px);
+      text-align: center;
+
+      .intro__title{
+        p{
+          text-transform: uppercase;
+          color: $color-black;
+          letter-spacing: 2px;
+          font-size: $font-size-intro-title;
+        }
+        img{
+          margin-top: 5px;
+          width: 15%;
+        }
+      }
+
+      .intro__content{
+        @include mt-mb(10px, 20px);
+        color: $color-primary;
+        font-size: $font-size-intro-content;
+      }
+
+      .intro__more{
+        button{
+          background-color: $color-black;
+          color: $color-white;
+          font-size: $font-size-button-more;
+          @include pl-pr(10px, 10px);
+          @include pt-pb(5px, 5px);
+          text-transform: uppercase;
+          font-family: inherit;
+        }
+      }
+    }
+  }
+
+  .sale{
+    @include mt-mb(100px, 0);
+    .wrapper{
+      .sale-container{
+        position: relative;
+        
+        & > img{
+          width: 100%;
+        }
+
+        &__product--wrapper{
+          position: absolute;
+          top: 50%;
+          left: 9%;
+          right: 9%;
+          display: flex;
+          align-items: center;
+          // justify-content: center;
+          background-color: $color-white;
+          @include pl-pr(10%, 10%);
+          padding-top: 10%;
+
+          .sale-container__item{
+            position: relative;
+            overflow: hidden;
+            flex: 0 0 60%;
+            text-align: center;
+            img
+            {
+              width: 250px;
+              padding: 3rem;
+            }
+            @include lg{
+              width: 100%;
+              padding: 5px;
+            }
+          }
+
+          .sale-container__detail{
+            flex: 0 0 40%;
+            // width: 100%;
+            // padding: 0;
+            // .detail__title{
+
+            // }
+          }
+        }
+      }
+    }
+  }
+}

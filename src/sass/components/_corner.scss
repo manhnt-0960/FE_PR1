@@ -1,0 +1,41 @@
+.corner-big{
+  .corner{
+    position: absolute;
+    top: -86px;
+    left: -86px;
+    height: 150px;
+    width: 150px;
+    background-color: $color-hover;
+    transform: rotate(-45deg);
+    @include lg{
+      width: 170px;
+      height: 170px;
+    }
+
+    p{
+      @include pt-pb(113px, 0);
+      color: $color-white;
+      font-size: $font-size-corner-big;
+      text-align: center;
+      @include lg{
+        @include pt-pb(125px, 0);
+      }
+    }
+  }
+
+  .underline{
+    position: absolute;
+    top: -106px;
+    left: -96px;
+    height: 174px;
+    width: 174px;
+    border: 1px solid $color-hover;
+    transform: rotate(-45deg);
+
+    @include lg{
+      width: 190px;
+      height: 190px;
+      top: -100px;
+    }
+  }
+}
