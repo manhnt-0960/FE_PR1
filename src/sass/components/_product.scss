@@ -1,0 +1,132 @@
+.product{
+  position: relative;
+  // box-sizing: border-box;
+  // @include pl-pr(5px, 5px)
+
+  &__image{
+    width: 100%;
+  }
+
+  &__title{
+    @include mt-mb(10px, 0);
+    p{
+      color: $color-black;
+      font-size: 14px;
+    }
+  }
+
+  &__price{
+    display: flex;
+    justify-content: center;
+    @include mt-mb(10px, 10px);
+    p{
+      &:first-child{
+        font-family: utm-caviar;
+        color: $color-hover;
+        font-size: 14px;
+        @include pl-pr(5px, 5px);
+        @include lg{
+          font-size: 20px;
+          @include pl-pr(10px, 10px);
+        }
+      }
+
+      &:last-child{
+        font-family: utm-caviar;
+        color: $color-primary;
+        font-size: 13px;
+        @include pl-pr(5px, 5px);
+        text-decoration: line-through;
+        @include lg{
+          font-size: 14px;
+          line-height: 22px;
+          @include pl-pr(10px, 10px);
+        }
+      }
+    }
+  }
+
+  &__compare{
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    background-color: $color-black;
+    justify-content: center;
+    align-items: center;
+    @include transition;
+    margin-top: -13px;
+    @include md{
+      margin-top: -18px;
+    }
+
+    @include lg{
+      margin-top: -24px;
+      width: 80%;
+    }
+
+    a{
+      color: $color-primary;
+      font-size: 9px;
+      line-height: 9px;
+      display: flex;
+      @include pt-pb(4px, 4px);
+      @include md{
+        @include pt-pb(5px, 5px);
+        font-size: 12px;
+        line-height: 12px;
+      }
+      @include lg{
+        @include pt-pb(7px, 7px);
+        font-size: 14px;
+        line-height: 14px;
+      }
+
+      &:first-child, &:nth-child(2){
+        @include pl-pr(4px, 4px);
+        border-right: 1px solid $color-primary;
+        @include md{
+          @include pl-pr(5px, 5px);
+        }
+        @include lg{
+          @include pl-pr(5px, 10px);
+        }
+      }
+
+      &:last-child{
+        @include pl-pr(4px, 4px);
+        @include md{
+          @include pl-pr(5px, 5px);
+        }
+        @include lg{
+          @include pl-pr(15px, 10px);
+        }
+      }
+    }
+  }
+
+  &:hover{
+    .product__compare{
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.btn-add-to-card{
+  button{
+    background-color: $color-black;
+    color: $color-white;
+    font-family: inherit;
+    font-size: 10px;
+    @include pt-pb(5px, 5px);
+    @include pl-pr(10px, 10px);
+    @include lg{
+      font-size: 14px;
+      @include pt-pb(10px, 10px);
+    }
+    @include transition;
+    &:hover{
+      background-color: $color-hover;
+    }
+  }
+}

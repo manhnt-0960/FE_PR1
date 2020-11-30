@@ -43,4 +43,24 @@ block content
               .detail__time
                 each item in timeBox
                   +time-box(item.num, item.text)
+    section.new-products
+      .wrapper
+        .new-products__title
+          +title-main('SẢN PHẨM MỚI')
+        .new-products__slide
+          input#new-products-1(type='radio' name='new-products', checked)
+          input#new-products-2(type='radio' name='new-products')
+          .slide__full-images--hidden
+            .slide__full-images
+              each product in indexNewProduct
+                +product(product.link, product.title, product.price1, product.price2, product.corner)
+          .silde__arrow
+            .slide_arrow__left
+              label(for='new-products-1')
+              i.fa.fa-arrow-left
+            .slide_arrow__right
+              label(for='new-products-2')
+              i.fa.fa-arrow-right
+          
+
           

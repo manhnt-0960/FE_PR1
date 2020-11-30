@@ -9,6 +9,12 @@ mixin corner-big(text)
       p= text
     .underline
 
+mixin corner-small(text)
+  .corner-snall
+    .corner
+      p= text
+    .underline
+
 mixin title-product(text, arrow)
   .title-product
     p= text
@@ -20,8 +26,9 @@ mixin image(name)
 
 mixin price-product(price)
   .price-product
-    p= price
-    sup đ
+    p
+      =price 
+      sup đ
 
 mixin btn-add-to-card
   .btn-add-to-card
@@ -31,3 +38,36 @@ mixin time-box(num, text)
   .time-box
     p= num
     p= text
+
+mixin product(link, title, price1, price2, text)
+  .product
+    .product__image
+      +image(link)
+    .product__compare
+      a(href='')
+        i.fa.fa-heart
+        p Yêu thích
+      a(href='')
+        i.fa.fa-signal
+        p So sánh
+      a(href='')
+        i.fa.fa-compress
+    .product__title
+      p= title
+    .product__price
+      p 
+        =price1
+        sup đ
+      p -
+      p 
+        =price2
+        sup đ
+    +btn-add-to-card
+    if text != ''
+      +corner-small(text)
+
+
+mixin title-main(text)
+  .title-main
+    p= text
+    +image('title.png')

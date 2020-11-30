@@ -62,8 +62,6 @@ main{
           left: 9%;
           right: 9%;
           display: flex;
-          align-items: center;
-          // justify-content: center;
           background-color: $color-white;
           @include pl-pr(10%, 10%);
           padding-top: 10%;
@@ -86,11 +84,125 @@ main{
 
           .sale-container__detail{
             flex: 0 0 40%;
-            // width: 100%;
-            // padding: 0;
-            // .detail__title{
+            font-size: 1rem;
+            .detail__title{
+              @include mt-mb(0, 10px);
+              @include lg{
+                @include mt-mb(0, 30px);
+              }
+            }
+            .detail__price{
+              @include mt-mb(0, 10px);
+              @include lg{
+                @include mt-mb(0, 30px);
+              }
+            }
+            .detail__add-card{
+              @include mt-mb(0, 20px);
 
-            // }
+              button{
+                background-color: $color-black;
+                color: $color-white;
+                font-family: inherit;
+                font-size: 10px;
+                @include pt-pb(5px, 5px);
+                @include pl-pr(10px, 10px);
+                @include lg{
+                  font-size: 14px;
+                  @include pt-pb(10px, 10px);
+                }
+                @include transition;
+                &:hover{
+                  background-color: $color-hover;
+                }
+              }
+            }
+
+            .detail__description{
+              @include mt-mb(0, 10px);
+              @include lg{
+                @include mt-mb(0, 30px);
+              }
+              p{
+                font-size: 12px;
+              }
+            }
+
+            .detail__time{
+              @include grid(2, 0);
+              .time-box{
+                border: 1px solid $color-hover;
+                text-align: center;
+
+                p{
+                  color: $color-hover;
+
+                  &:first-child{
+                    @include pt-pb(5px, 0);
+                    font-family: utm-caviar;
+                    font-size: 20px;
+                    letter-spacing: 3px;
+                    @include md{
+                      font-size: 30px;
+                      @include pt-pb(10px, 0);
+
+                    }
+                  }
+
+                  &:last-child{
+                    @include pt-pb(0, 10px);
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    @include md{
+                      font-size: 20px;
+                    }
+                    @include lg{
+                      font-size: 24px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .new-products{
+    margin-top: 350px;
+    @include lg{
+      margin-top: 350px;
+    }
+    @include xl{
+      // margin-top: 400px;
+    }
+    .wrapper{
+      text-align: center;
+      .new-products__title{
+        text-align: center;
+      }
+      .new-products__slide{
+        position: relative;
+        @include mt-mb(45px, 0);
+        
+        input{
+          position: absolute;
+          visibility: hidden;
+        }
+        
+        .slide__full-images--hidden{
+          overflow: hidden;
+          
+          .slide__full-images{
+            display: flex;
+            width: 200%;
+            transform: translateX(0%);
+            @include transition;
+
+            .product{
+              @extend %product-slide;
+            }
           }
         }
       }

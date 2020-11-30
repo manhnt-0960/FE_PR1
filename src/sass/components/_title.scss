@@ -3,5 +3,51 @@
     color: $color-black;
     text-transform: uppercase;
     font-size: 20px;
+    @include lg{
+      font-size: 34px;
+    }
+    @include md{
+      font-size: 30px;
+    }
+  }
+  img{
+    width: 65px;
+    
+  }
+}
+
+.price-product{
+  p{
+    color: $color-hover;
+    font-family: utm-caviar;
+    font-size: 24px;
+    letter-spacing: 1px;
+    @include md{
+      font-size: 30px;
+      letter-spacing: 2px;
+    }
+    @include lg{
+      font-size: 34px;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+.title-main{
+  p{
+    text-transform: uppercase;
+    font-size: 18px;
+    color: $color-black;
+    letter-spacing: 1px;
+    @include md{
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+  }
+  img{
+    width: 28%;
+    @include md{
+      width: 170px;
+    }
   }
 }
