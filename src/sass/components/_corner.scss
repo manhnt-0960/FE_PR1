@@ -39,3 +39,49 @@
     }
   }
 }
+
+.corner-small{
+  .corner{
+    position: absolute;
+    top: -55px;
+    left: -55px;
+    height: 90px;
+    width: 90px;
+    background-color: $color-hover;
+    transform: rotate(-45deg);
+    @include lg{
+      width: 100px;
+      height: 100px;
+      top: -50px;
+      left: -50px;
+    }
+
+    p{
+      @include pt-pb(70px, 0);
+      color: $color-white;
+      text-align: center;
+      font-size: 16px;
+      @include lg{
+        font-size: $font-size-corner-small;
+        @include pt-pb(70px, 0);
+      }
+    }
+  }
+
+  .underline{
+    position: absolute;
+    top: -80px;
+    left: -75px;
+    height: 120px;
+    width: 120px;
+    border: 1px solid $color-hover;
+    transform: rotate(-45deg);
+
+    @include lg{
+      width: 120px;
+      height: 120px;
+      top: -63px;
+      left: -63px;
+    }
+  }
+}

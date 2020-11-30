@@ -48,19 +48,19 @@ block content
         .new-products__title
           +title-main('SẢN PHẨM MỚI')
         .new-products__slide
-          input#new-products-1(type='radio' name='new-products', checked)
+          input#new-products-1(type='radio' name='new-products')
           input#new-products-2(type='radio' name='new-products')
           .slide__full-images--hidden
             .slide__full-images
               each product in indexNewProduct
                 +product(product.link, product.title, product.price1, product.price2, product.corner)
-          .silde__arrow
-            .slide_arrow__left
+          .slide__arrow
+            .slide__arrow__left
               label(for='new-products-1')
-              i.fa.fa-arrow-left
-            .slide_arrow__right
+                i.fa.fa-arrow-left
+            .slide__arrow__right
               label(for='new-products-2')
-              i.fa.fa-arrow-right
-          
-
-          
+                i.fa.fa-arrow-right
+    section.index-images
+      each link in indexImages
+        +index-images-item(link)      

@@ -2,6 +2,8 @@
 @import "../base/mixins";
 @import "../base/reset";
 @import "../base/global";
+@import "../base/placeholder";
+
 
 main{
   .intro{
@@ -203,6 +205,73 @@ main{
             .product{
               @extend %product-slide;
             }
+          }
+        }
+        #new-products-1{
+          :checked ~ .slide__full-images--hidden .slide__full-images{
+            transform: translateX(-50%);
+          }
+        }
+
+        #new-products-2:checked ~ .slide__full-images--hidden .slide__full-images{
+          transform: translateX(-50%);
+        }
+        .slide__arrow{
+          &__left{
+            position: absolute;
+            top: 50%;
+            left: -15px;
+          }
+
+          &__right{
+            position: absolute;
+            top: 50%;
+            right: -15px;
+          }
+
+          &__left, &__right{
+            i{
+              color: $color-hover;
+              font-size: $font-size-slide-arrow;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .index-images{
+    @include grid(4, 0);
+    @include mt-mb(100px, 0);
+
+    &__item{
+      overflow: hidden;
+
+      &:hover{
+        border: 1px solid $color-hover;
+        img{
+          transform: scale(1.1);
+          opacity: 0.8;
+        }
+        
+        .index-images__item__hover{
+          p{
+            @include xl{
+              visibility: visible;
+              opacity: 1;
+            }
+
+            &:last-of-type {
+              &::before {
+                  opacity: 1;
+                  transform: scale(1);
+              }
+              &::after {
+                  opacity: 1;
+                  transform: scale(1);
+              }
+            }  
           }
         }
       }

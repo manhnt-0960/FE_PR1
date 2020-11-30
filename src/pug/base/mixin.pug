@@ -10,7 +10,7 @@ mixin corner-big(text)
     .underline
 
 mixin corner-small(text)
-  .corner-snall
+  .corner-small
     .corner
       p= text
     .underline
@@ -71,3 +71,10 @@ mixin title-main(text)
   .title-main
     p= text
     +image('title.png')
+
+mixin index-images-item(link)
+  .index-images__item
+    +image(link)
+    .index-images__item__hover
+      p 1987
+      p RƯỢU
