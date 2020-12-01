@@ -3,9 +3,6 @@ header{
 
   .header__top--relative, .header__top-menu--absolute{
     z-index: $z-index-header-top-menu;
-    background-image: url(../images/header-slide-1.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
 
     .wrapper{
       display: flex;
@@ -23,13 +20,13 @@ header{
 
           li{
             &:not(:last-child)::after{
-              color: $color-white;
+              // color: $color-white;
               content: "-";
               @include pl-pr(12px, 12px);
             }
             a{
               @include transition;
-              color: $color-white;
+              // color: $color-white;
               &:hover{
                 text-decoration: underline;
               }
@@ -58,7 +55,7 @@ header{
           }
         }
         i{
-          color: $color-white;
+          // color: $color-white;
           cursor: pointer;
           @include transition;
           @include lg{
@@ -101,30 +98,52 @@ header{
           background-color: $color-white;
         }
       }
-      ul li a{
-        color: $color-black;
+
+      ul{
+        li{
+          &:not(:last-child)::after{
+            color: $color-black;
+          }
+          a{
+            color: $color-black;
+          }
+        }  
       }
     }
   }
 
   .header__top-menu--absolute{
     position: absolute;
+    top: 0;
     left: 0;
     right: 0;
     background-color: $color-transparent;
+    background-image: url(../images/header-slide-1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 
-    .header__top_left{
-      &:hover ul{
-        @include lg-max{
-          background-color: $color-transparent;
+    .wrapper{
+      .header__top_left{
+        background-color: white;
+        &:hover ul{
+          @include lg-max{
+            background-color: $color-transparent;
+          }
+        }
+  
+        ul{
+          li{
+            color: $color-header-top;
+            a{
+              color: $color-header-top;
+            }
+          }
+        }
+  
+        i{
+          color: $color-header-top;
         }
       }
-      ul li a{
-        color: $color-header-top;
-      }
-    }
-    i{
-      color: $color-header-top;
     }
   }
 
