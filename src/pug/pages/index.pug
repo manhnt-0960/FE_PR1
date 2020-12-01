@@ -64,3 +64,45 @@ block content
     section.index-images
       each link in indexImages
         +index-images-item(link)      
+    section.salest-products
+      .wrapper
+        .salest-products__title
+          +title-main('SẢN PHẨM BÁN CHẠY')
+        .salest-products__slide
+          input#pre-salest-product(type='radio', name='salest-product')
+          input#next-salest-product(type='radio', name='salest-product')
+          .slide__full-images--hidden
+            .slide__full-images
+              each product in indexNewProduct
+                +product(product.link, product.title, product.price1, product.price2, product.corner)
+          .slide__arrow
+            .slide__arrow__left
+              label(for='new-products-1')
+                i.fa.fa-arrow-left
+            .slide__arrow__right
+              label(for='new-products-2')
+                i.fa.fa-arrow-right
+    section.blog-customer
+      .wrapper
+        .index-blog
+          .index-blog__title
+            +title-main('TIN TỨC & BLOG')
+          .index-blog__content
+            +blog-item(blogList[0].link, blogList[0].text1, blogList[0].text2, blogList[0].text3)
+            +blog-item(blogList[1].link, blogList[1].text1, blogList[1].text2, blogList[1].text3)
+        .index-customer
+          .index-customer__title
+            +title-main('KHÁCH HÀNG')
+          .index-customer__content
+            +image('index-customer-circle.png')
+          .index-customer__comment
+            p Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...
+            a(href='#') Read more
+          .index-customer__avatar
+            +image('index-customer-avatar.png')
+            p GIANG LT
+            p Graphic design
+          .index-customer__dots
+            span
+            span
+            span

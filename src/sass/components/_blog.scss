@@ -1,0 +1,82 @@
+.blog-item{
+  &__image{
+    position: relative;
+    img{
+      width: 100%;
+    }
+
+    &__hover{
+      .blog-item__hover__bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        opacity: 0;
+        background: linear-gradient(to bottom right, transparent 50%, $color-blog-hover 50%);
+        @include transition;
+      }
+
+      .blog-item__hover__icon{
+        i{
+          position: absolute;
+          visibility: hidden;
+          opacity: 0;
+          top: 44%;
+          left: 45%;
+          color: $color-black;
+          border-radius: 50%;
+          background-color: $color-white;
+          @include pt-pb(10px, 10px);
+          @include pl-pr(10px, 10px);
+          font-size: 12px;
+          transform: rotate(-90deg);
+          @include transition;
+        }
+      }
+
+      a{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &:hover{
+      .blog-item__hover__bg, .blog-item__hover__icon i{
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__title{
+    @include mt-mb(20px, 5px);
+    p{
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 1px;
+      color: $color-black;
+    }
+  }
+
+  &__info{
+    @include mt-mb(0, 7px);
+    p{
+      opacity: 0.5;
+      color: $color-primary;
+      font-size: 10px;
+    }
+  }
+
+  &__content{
+    @include mt-mb(0, 5px);
+    a{
+      color: $color-primary;
+      opacity: 0.5;
+    }
+  }
+}

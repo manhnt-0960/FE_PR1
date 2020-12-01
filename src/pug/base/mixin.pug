@@ -78,3 +78,20 @@ mixin index-images-item(link)
     .index-images__item__hover
       p 1987
       p RƯỢU
+
+mixin blog-item(link, title, info, content)
+  .blog-item
+    .blog-item__image
+      +image(link)
+      .blog-item__image__hover
+        .blog-item__hover__bg
+        .blog-item__hover__icon
+          i.fa.fa-link
+        a(href='#')
+    .blog-item__title
+      p= title
+    .blog-item__info
+      p= info
+    .blog-item__content
+      p= content
+      a(href='#') Read more
