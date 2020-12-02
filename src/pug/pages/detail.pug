@@ -3,6 +3,35 @@ extends ../layouts/default-layout
 block title
   title Chi tiết sản phẩm
 
-block header-top
-  .header__top--relative
-    include ../partials/header-top
+block content
+  main
+    section.breadcrumb
+      .wrapper
+        ul
+          each item in detailLink
+            li
+              a(href= item.link)= item.name
+    section.product-detail
+      .wrapper
+        .product-picture
+          .product-picture__left
+            - var n = 1;
+            while n < 3
+              input(id=`detail-slide-${n++}` type='radio' name='detail-slide')
+            .slide-full-images--hidden
+              .slide-full-images
+                each item in detailMainLeft
+                  .slide-image
+                    +image(item)
+            .slide-arrow
+              .slide-arrow__up
+                label(for='detail-slide-1')
+                  i.fa.fa-arrow-up
+              .slide-arrow__down
+                label(for='detail-slide-2')
+                  i.fa.fa-arrow-down
+          .product-picture__right
+            +image('detail-main-middle.png')
+        .price-sale
+    section.product-description
+    section.relate-product
