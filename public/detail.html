@@ -118,46 +118,138 @@
         <div class="wrapper">
           <div class="product-picture">
             <div class="product-picture__left">
+              <input id="detail-slide-1" type="radio" name="detail-slide"/>
+              <input id="detail-slide-2" type="radio" name="detail-slide"/>
               <div class="slide-full-images--hidden">
                 <div class="slide-full-images">
-                  <div class="slide-image"><img src="./assets/images/detail-main-left-1.jpg"/>
+                  <div class="slide-image">
+                    <div class="image-container"><img src="./assets/images/detail-main-left-1.jpg"/>
+                    </div>
                   </div>
-                  <div class="slide-image"><img src="./assets/images/detail-main-left-1.jpg"/>
+                  <div class="slide-image">
+                    <div class="image-container"><img src="./assets/images/detail-main-left-1.jpg"/>
+                    </div>
                   </div>
-                  <div class="slide-image"><img src="./assets/images/detail-main-left-2.jpg"/>
+                  <div class="slide-image">
+                    <div class="image-container"><img src="./assets/images/detail-main-left-2.jpg"/>
+                    </div>
                   </div>
-                  <div class="slide-image"><img src="./assets/images/detail-main-left-3.jpg"/>
+                  <div class="slide-image">
+                    <div class="image-container"><img src="./assets/images/detail-main-left-3.jpg"/>
+                    </div>
                   </div>
-                  <div class="slide-image"><img src="./assets/images/detail-main-left-1.jpg"/>
+                  <div class="slide-image">
+                    <div class="image-container"><img src="./assets/images/detail-main-left-1.jpg"/>
+                    </div>
                   </div>
-                  <div class="slide-image"><img src="./assets/images/detail-main-left-1.jpg"/>
+                  <div class="slide-image">
+                    <div class="image-container"><img src="./assets/images/detail-main-left-1.jpg"/>
+                    </div>
                   </div>
-                  <div class="slide-image"><img src="./assets/images/detail-main-left-1.jpg"/>
+                  <div class="slide-image">
+                    <div class="image-container"><img src="./assets/images/detail-main-left-1.jpg"/>
+                    </div>
                   </div>
-                  <div class="slide-image"><img src="./assets/images/detail-main-left-2.jpg"/>
+                  <div class="slide-image">
+                    <div class="image-container"><img src="./assets/images/detail-main-left-2.jpg"/>
+                    </div>
                   </div>
-                  <div class="slide-image"><img src="./assets/images/detail-main-left-3.jpg"/>
+                  <div class="slide-image">
+                    <div class="image-container"><img src="./assets/images/detail-main-left-3.jpg"/>
+                    </div>
                   </div>
-                  <div class="slide-image"><img src="./assets/images/detail-main-left-1.jpg"/>
+                  <div class="slide-image">
+                    <div class="image-container"><img src="./assets/images/detail-main-left-1.jpg"/>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="slide-arrow">
-                <div class="slide-arrow__up">
+                <div class="slide-arrow__up arrow">
                   <label for="detail-slide-1"><i class="fa fa-arrow-up"></i></label>
                 </div>
-                <div class="slide-arrow__down">
-                  <label for="detail-slide-2"><i class="fa fa-arrow-down"></i></label>
+                <div class="slide-arrow__down arrow">
+                  <label for="detail-slide-2"><i class="fa fa-arrow-down arrow"></i></label>
                 </div>
               </div>
             </div>
             <div class="product-picture__right"><img src="./assets/images/detail-main-middle.png"/>
             </div>
           </div>
-          <div class="price-sale"></div>
+          <div class="price-sale">
+            <div class="price-sale__title">
+              <div class="title-product">
+                <p>Rượu nho năm 1987</p><img src="./assets/images/arrow.png"/>
+              </div>
+            </div>
+            <div class="price-sale__price">
+              <div class="price-product">
+                <p>330.000<sup>đ</sup>
+                </p>
+              </div>
+            </div>
+            <div class="product-sale__review">
+              <ul>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fas fa-star-half-alt"></i></li>
+                <li><i class="far fa-star"></i></li>
+              </ul>
+              <p>1 Revies(S) | Add Your Review</p>
+            </div>
+            <form method="post">
+              <div class="product-sale__color">
+                <div class="detail-title">
+                  <p>Màu sắc</p>
+                </div>
+                <input type="radio" name="color" id="color-yellow" checked="checked"/>
+                <label for="color-yellow"></label>
+                <input type="radio" name="color" id="color-black"/>
+                <label for="color-black"></label>
+                <input type="radio" name="color" id="color-red"/>
+                <label for="color-red"></label>
+              </div>
+              <div class="product-sale__size">
+                <div class="detail-title">
+                  <p>Kích cỡ</p>
+                </div>
+                <div class="product-sale__size__container">
+                  <select>
+                    <option value="Loại nhỏ">Loại nhỏ</option>
+                    <option value="Loại vừa">Loại vừa</option>
+                    <option value="Loại to">Loại to</option>
+                  </select><i class="fa fa-caret-down"></i>
+                </div>
+              </div>
+              <div class="product-sale__quantity">
+                <div class="detail-title">
+                  <p>Số Lượng</p>
+                </div>
+                <div class="quantity-detail">
+                  <input type="number" value="1"/><i class="fa fa-minus"></i><i class="fa fa-plus"></i>
+                </div>
+                <button class="btn-add-to-card" type="submit">ADD TO CARD</button>
+              </div>
+              <div class="product-sale__compare">
+                <ul>
+                  <li><i class="fa fa-heart"></i><a href="">Yêu thích</a></li>
+                  <li><i class="fa fa-signal"></i><a href="">So sánh</a></li>
+                  <li><i class="fa fa-envelope"></i><a href="">Email</a></li>
+                </ul>
+              </div>
+              <div class="product-sale__description">
+                <div class="detail-title">
+                  <p>Mô tả</p>
+                </div>
+                <p>Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.</p>
+              </div>
+              <div class="product-sale__social"></div>
+            </form>
+          </div>
         </div>
       </section>
-      <section class="product-description"></section>
+      <section class="product-content"></section>
       <section class="relate-product"></section>
     </main>
     <footer>

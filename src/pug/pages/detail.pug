@@ -22,16 +22,60 @@ block content
               .slide-full-images
                 each item in detailMainLeft
                   .slide-image
-                    +image(item)
+                    .image-container
+                      +image(item)
             .slide-arrow
-              .slide-arrow__up
+              .slide-arrow__up.arrow
                 label(for='detail-slide-1')
                   i.fa.fa-arrow-up
-              .slide-arrow__down
+              .slide-arrow__down.arrow
                 label(for='detail-slide-2')
-                  i.fa.fa-arrow-down
+                  i.fa.fa-arrow-down.arrow
           .product-picture__right
             +image('detail-main-middle.png')
         .price-sale
-    section.product-description
+          .price-sale__title
+            +title-product('Rượu nho năm 1987', true)
+          .price-sale__price
+             +price-product('330.000')
+          .product-sale__review
+            ul
+              each item in detailReview
+                li
+                  i(class= item)
+            p 1 Revies(S) | Add Your Review
+          form(method='post')
+            .product-sale__color
+              +detail-title('Màu sắc')
+              input(type='radio', name='color', id='color-yellow', checked)
+              label(for='color-yellow')
+              input(type='radio', name='color', id='color-black')
+              label(for='color-black')
+              input(type='radio', name='color', id='color-red')
+              label(for='color-red')
+            .product-sale__size
+              +detail-title('Kích cỡ')
+              .product-sale__size__container
+                select
+                  each item in detailSize
+                    option(value= item)= item
+                i.fa.fa-caret-down
+            .product-sale__quantity
+              +detail-title('Số Lượng')
+              .quantity-detail
+                input(type='number', value=1)
+                i.fa.fa-minus
+                i.fa.fa-plus
+              button(type='submit', class="btn-add-to-card") ADD TO CARD
+            .product-sale__compare
+              ul
+                each item in detailCompare
+                  li
+                    i(class= item.class)
+                    a(href= '')= item.text
+            .product-sale__description
+              +detail-title('Mô tả')
+              p Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.
+            .product-sale__social
+    section.product-content
     section.relate-product
