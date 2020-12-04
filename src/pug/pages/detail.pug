@@ -5,12 +5,7 @@ block title
 
 block content
   main
-    section.breadcrumb
-      .wrapper
-        ul
-          each item in detailLink
-            li
-              a(href= item.link)= item.name
+    +breadcrumb
     section.product-detail
       .wrapper
         .product-picture

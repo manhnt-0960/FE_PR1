@@ -103,3 +103,35 @@ mixin detail-title(text, active)
   else
     .detail-title
       p= text
+
+mixin breadcrumb(link)
+  section.breadcrumb
+      .wrapper
+        ul
+          each item in link
+            li
+              a(href= item.link)= item.name
+
+mixin products-breadcrumb
+  +breadcrumb(detailLink))
+
+mixin products-banner
+  .products-banner
+    .wrapper
+      +image('products-banner.png')
+
+mixin products-content
+  section.products-content
+    .wrapper
+      .products-content__left
+        .products-content__left__list
+          +title-small('DANH MỤC SẢN PHẨM')
+        .products-content__left__compare
+        .products-content__left__tag
+        .products-content__left__banner
+      .products-content__right
+
+mixin title-small(text)
+  .title-small
+    p= text
+    +image('title.png')
