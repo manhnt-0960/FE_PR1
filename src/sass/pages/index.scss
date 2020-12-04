@@ -327,6 +327,7 @@ main {
 
   .salest-products {
     margin-top: 100px;
+    margin-bottom: 70px;
 
     .wrapper {
       text-align: center;
@@ -359,13 +360,13 @@ main {
           }
         }
 
-        #new-products-1 {
+        #next-salest-product {
           :checked~.slide__full-images--hidden .slide__full-images {
             transform: translateX(-50%);
           }
         }
 
-        #new-products-2:checked~.slide__full-images--hidden .slide__full-images {
+        #pre-salest-product:checked~.slide__full-images--hidden .slide__full-images {
           transform: translateX(-50%);
         }
 

@@ -38,44 +38,98 @@ block content
             +title-product('Rượu nho năm 1987', true)
           .price-sale__price
              +price-product('330.000')
-          .product-sale__review
+          .price-sale__review
             ul
               each item in detailReview
                 li
                   i(class= item)
             p 1 Revies(S) | Add Your Review
           form(method='post')
-            .product-sale__color
+            .price-sale__color
               +detail-title('Màu sắc')
               input(type='radio', name='color', id='color-yellow', checked)
-              label(for='color-yellow')
+              label(for='color-yellow', class='yellow')
               input(type='radio', name='color', id='color-black')
-              label(for='color-black')
+              label(for='color-black', class='black')
               input(type='radio', name='color', id='color-red')
-              label(for='color-red')
-            .product-sale__size
+              label(for='color-red', class='red')
+            .price-sale__size
               +detail-title('Kích cỡ')
-              .product-sale__size__container
+              .price-sale__size__container
                 select
                   each item in detailSize
                     option(value= item)= item
                 i.fa.fa-caret-down
-            .product-sale__quantity
+            .price-sale__quantity
               +detail-title('Số Lượng')
-              .quantity-detail
-                input(type='number', value=1)
-                i.fa.fa-minus
-                i.fa.fa-plus
-              button(type='submit', class="btn-add-to-card") ADD TO CARD
-            .product-sale__compare
+              .detail-wrapper
+                .quantity-detail
+                  input(type='number', value=1)
+                  i.fa.fa-minus
+                  i.fa.fa-plus
+                .btn-add-to-card 
+                  button(type='submit') ADD TO CARD
+            .price-sale__compare
               ul
                 each item in detailCompare
                   li
                     i(class= item.class)
                     a(href= '')= item.text
-            .product-sale__description
+            .price-sale__description
               +detail-title('Mô tả')
               p Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.
-            .product-sale__social
+            .price-sale__social
+              .price-sale__social__fb
+                button
+                  i.fab.fa-facebook-square
+                  span Like
+                p 0
+              .price-sale__social__tw
+                button
+                  i.fab.fa-twitter
+                  span Twitter
+                p 0
+              .price-sale__social__gg
+                button
+                  i.fab.fa-google-plus-g
+                p 0
+              .price-sale__social__in
+                button
+                  i.fab.fa-linkedin
+                  span Share
+              .price-sale__social__pi
+                button
+                  i.fab.fa-pinterest-square
+                p 0
     section.product-content
-    section.relate-product
+      .wrapper
+        .content-left
+          .content-left__title
+              +detail-title('ĐẶC ĐIỂM NỔI BẬT', true)
+              +detail-title('THÔNG TIN SẢN PHẨM')
+              +detail-title('ĐÁNH GIÁ')
+          .content-left__text
+            p Đừng nghĩ rằng chỉ vì đôi chân to mà bạn không thể mặc được món đồ nào khác ngoài quần dài. Sau đây là những item vừa trendy lại vừa có tác dụng rất hiệu quả trong việc điều chỉnh đôi chân to của bạn. Mùa hè là mùa của những bộ cánh thoải mái, thoáng mát và hẳn cô gái nào cũng muốn khoe chân tối đa. Tuy nhiên, điều này lại không hề dễ dàng đối với những cô nàng sở hữu đôi chân to.Đừng nghĩ rằng chỉ vì đôi chân to mà bạn không thể mặc được món đồ nào khác ngoài quần dài. Sau đây là những item vừa trendy lại vừa có tác dụng rất hiệu quả trong việc điều chỉnh đôi chân to của bạn.
+            p Mùa hè là mùa của những bộ cánh thoải mái, thoáng mát và hẳn cô gái nào cũng muốn khoe chân tối đa. Tuy nhiên, điều này lại không hề dễ dàng đối với những cô nàng sở hữu đôi chân to. Vậy diện đồ thế nào để vừa tạo cảm giác nhẹ nhàng nhưng lại khéo léo giấu được nhược điểm ấy? Sau đây, chúng tôi xin đưa ra gợi ý về loạt item mà các cô nàng chân to nên gắn bó trong mùa hè này.
+        .content-right
+          .image
+            +image('detail-content-right.png')
+          p Rượu nho
+    section.salest-products
+      .wrapper
+        .salest-products__title
+          +title-main('SẢN PHẨM LIÊN QUAN')
+        .salest-products__slide
+          input#pre-relate-product(type='radio', name='relate-product')
+          input#next-relate-product(type='radio', name='relate-product')
+          .slide__full-images--hidden
+            .slide__full-images
+              each product in indexNewProduct
+                +product(product.link, product.title, product.price1, product.price2)
+          .slide__arrow
+            .slide__arrow__left
+              label(for='pre-relate-product')
+                i.fa.fa-arrow-left
+            .slide__arrow__right
+              label(for='next-relate-product')
+                i.fa.fa-arrow-right

@@ -150,6 +150,272 @@ main{
         }
       }
       
+      .price-sale{
+        @include pl-pr(30px, 0);
+
+        &__price{
+          @include mt-mb(10px, 5px);
+
+          .price-product{
+            font-family: utm-caviar;
+          }
+        }
+
+        &__review{
+          border-top: 1px solid $color-border;
+          border-bottom: 1px solid $color-border;
+          @include pt-pb(15px, 15px);
+          display: flex;
+          
+          p{
+            @include ml-mr(10px, 0);
+          }
+
+          ul{
+            li{
+              i{
+                color: $color-primary;
+                @include transition;
+
+                &:hover{
+                  color: $color-hover;
+                }
+              }
+            }
+          }
+        }
+
+        &__color{
+          @include mt-mb(10px, 10px);
+          @include pt-pb(10px, 10px);
+          input{
+            display: none;
+          }
+
+          label{
+            margin-top: 10px;
+            width: 29px;
+            height: 29px;
+            display: inline-block;
+            margin-right: 5px;
+          }
+
+          .yellow{
+            background-color: yellow;
+          }
+
+          .red{
+            background-color: red;
+          }
+
+          .black{
+            background-color: black;
+          }
+
+          #color-yellow:checked + label{
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+          }
+
+          #color-black:checked + label{
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+          }
+
+          #color-red:checked + label{
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+          }
+        }
+
+        &__size{
+          @include mt-mb(0, 10px);
+
+          &__container{
+            @include pt-pb(10px, 10px);
+            position: relative;
+            
+            select{
+              width: 21%;
+              font-family: 'Time news roman';
+              height: 30px;
+              @include pl-pr(10px, 0);
+              font-size: 14px;
+              color: $color-primary;
+              background-color: $color-white;
+              outline: none;
+              border: 1px solid $color-border;
+              appearance: none;
+            }
+
+            i{
+              position: absolute;
+              top: 30%;
+              left: 18%;
+              font-size: 18px;
+            }
+          }
+        }
+
+        &__quantity{
+          @include mt-mb(10px, 10px);
+
+          .detail-wrapper{
+            display: flex;
+            @include mt-mb(10px, 0);
+
+            .quantity-detail{
+              position: relative;
+              display: flex;
+              align-items: center;
+              min-height: 100%;
+              @include ml-mr(0, 18px);
+              background-color: $color-border;
+            
+              input{
+                width: 64px;
+                margin: auto;
+                height: 25px;
+                @include pl-pr(24%, 0);
+                @include ml-mr(29px, 29px);
+                border: none;
+                color: $color-primary;
+                font-family: 'Time news roman';
+                font-size: 14px;
+              }
+
+              i{
+                // display: none;
+                position: absolute;
+                // font-size: 14px;
+                color: $color-primary;
+
+                &:first-of-type{
+                  left: 9px;
+                }
+
+                &:last-of-type{
+                  right: 9px;
+                }
+              }
+            }
+          }
+        }
+
+        &__compare{
+          @include mt-mb(30px, 10px);
+          display: block;
+
+          ul{
+            display: flex;
+
+            li{
+              margin-right: 30px;
+
+              a{
+                color: $color-primary;
+                @include pl-pr(5px, 0);
+                font-size: 14px;
+                @include transition;
+              }
+
+              i{
+                cursor: pointer;
+                @include transition;
+              }
+            }
+          }
+        }
+
+        &__description{
+          @include mt-mb(20px, 10px);
+          p{
+            margin-top: 5px;
+          }
+        }
+
+        &__social{
+          @include mt-mb(30px, 10px);
+          display: flex;
+          align-items: center;
+
+          &__fb, &__tw, &__gg, &__in, &__pi{
+            display: flex;
+            margin-right: 30px;
+            align-items: center;
+            
+            button{
+              @include pl-pr(5px, 5px);
+              @include pt-pb(2px, 2px);
+            
+              span{
+                @include pl-pr(3px, 0);
+              }              
+            }
+
+            p{
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .product-content{
+    .wrapper{
+      @include mt-mb(60px, 50px);
+      display: flex;
+
+      .content-left{
+        flex: 0 0 50%;
+
+        &__title{
+          display: flex;
+          
+          .detail-title{
+            margin-right: 10px;
+            @include pl-pr(4px, 4px);
+            @include pt-pb(4px, 4px);
+            
+            p{
+              letter-spacing: 1px;
+            }
+          }
+        }
+
+        &__text{
+          @include mt-mb(15px, 0);
+          
+          p{
+            font-size: 12px;
+
+            &:first-of-type{
+              text-indent: 10px;
+            }
+          }
+        }
+      }
+
+      .content-right{
+        flex: 0 0 40%;
+        position: relative;
+        margin-top: 20px;
+
+        .image{
+          float: right
+        }
+
+        p{
+          position: absolute;
+          top: 35%;
+          left: 35%;
+          color: $color-white;
+          font-size: 45px;
+          text-transform: uppercase;
+          font-family: 'roboto thin';
+        }
+      }
     }
   }
 }

@@ -39,7 +39,7 @@ mixin time-box(num, text)
     p= num
     p= text
 
-mixin product(link, title, price1, price2, text)
+mixin product(link, title, price1, price2, text='')
   .product
     .product__image
       +image(link)
@@ -96,6 +96,10 @@ mixin blog-item(link, title, info, content)
       p= content
       a(href='#') Read more
 
-mixin detail-title(text)
-  .detail-title
-    p= text
+mixin detail-title(text, active)
+  if active == true
+    .detail-title.active
+      p= text
+  else
+    .detail-title
+      p= text

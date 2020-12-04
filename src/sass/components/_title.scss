@@ -51,3 +51,14 @@
     }
   }
 }
+
+.detail-title{
+  color: $color-primary;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.active{
+  background: $color-hover;
+  color: $color-white;
+}
